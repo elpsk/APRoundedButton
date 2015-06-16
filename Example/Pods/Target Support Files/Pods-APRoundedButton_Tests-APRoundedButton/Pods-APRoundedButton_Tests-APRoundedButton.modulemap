@@ -1,0 +1,6 @@
+framework module APRoundedButton {
+  umbrella header "Pods-APRoundedButton_Tests-APRoundedButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
