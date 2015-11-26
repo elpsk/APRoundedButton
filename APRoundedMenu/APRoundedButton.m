@@ -6,63 +6,56 @@
 #import "APRoundedButton.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface APRoundedButton()
+{
+    UIRectCorner _corners;
+}
+@end
 
 @implementation APRoundedButton
 
-- (void)awakeFromNib
-{
-  [super awakeFromNib];
-
-  UIRectCorner corners;
-
-
-  switch ( self.style )
-  {
-    case 0:
-      corners = UIRectCornerBottomLeft;
-      break;
-    case 1:
-      corners = UIRectCornerBottomRight;
-      break;
-    case 2:
-      corners = UIRectCornerTopLeft;
-      break;
-    case 3:
-      corners = UIRectCornerTopRight;
-      break;
-    case 4:
-      corners = UIRectCornerBottomLeft | UIRectCornerBottomRight;
-      break;
-    case 5:
-      corners = UIRectCornerTopLeft | UIRectCornerTopRight;
-      break;
-    case 6:
-      corners = UIRectCornerBottomLeft | UIRectCornerTopLeft;
-      break;
-    case 7:
-      corners = UIRectCornerBottomRight | UIRectCornerTopRight;
-      break;
-    case 8:
-      corners = UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerTopLeft;
-      break;
-    case 9:
-      corners = UIRectCornerBottomRight | UIRectCornerTopRight | UIRectCornerBottomLeft;
-      break;
-    default:
-      corners = UIRectCornerAllCorners;
-      break;
-  }
-
-
-  UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.bounds
-                                                 byRoundingCorners:corners
-                                                       cornerRadii:CGSizeMake(20.0, 30.0)];
-  CAShapeLayer *maskLayer = [CAShapeLayer layer];
-  maskLayer.frame         = self.bounds;
-  maskLayer.path          = maskPath.CGPath;
-  self.layer.mask         = maskLayer;
+- (void)setTopLeft:(BOOL)topLeft {
+    _topLeft = topLeft;
+    _corners |= UIRectCornerTopLeft;
 }
 
+- (void)setTopRigth:(BOOL)topRigth {
+    _topRigth = topRigth;
+    _corners |= UIRectCornerTopRight;
+}
+
+- (void)setBottomLeft:(BOOL)bottomLeft {
+    _bottomLeft = bottomLeft;
+    _corners |= UIRectCornerBottomLeft;
+}
+
+- (void)setBottomRigth:(BOOL)bottomRigth {
+    _bottomRigth = bottomRigth;
+    _corners |= UIRectCornerBottomRight;
+}
+
+- (void)setFillColor:(UIColor *)fillColor {
+    _fillColor = fillColor;
+    self.backgroundColor = fillColor;
+}
+
+- (void)setCornerRadius:(int)cornerRadius {
+    _cornerRadius = cornerRadius;
+}
+
+- (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
+
+    UIBezierPath *maskPath =
+    [UIBezierPath bezierPathWithRoundedRect:self.bounds
+                          byRoundingCorners:_corners
+                                cornerRadii:CGSizeMake(_cornerRadius, _cornerRadius+10)];
+
+    CAShapeLayer *maskLayer = [CAShapeLayer layer];
+    maskLayer.frame         = self.bounds;
+    maskLayer.path          = maskPath.CGPath;
+    self.layer.mask         = maskLayer;
+}
 
 @end
 

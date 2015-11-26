@@ -22,6 +22,7 @@
 		59E5626518EC0FAD00CEDC86 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59E5626318EC0FAD00CEDC86 /* InfoPlist.strings */; };
 		59E5626718EC0FAD00CEDC86 /* APRoundedMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E5626618EC0FAD00CEDC86 /* APRoundedMenuTests.m */; };
 		59E5627218EC0FBB00CEDC86 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 59E5627118EC0FBB00CEDC86 /* APRoundedButton.m */; };
+		C3A1E88B1C07779700B33C13 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C3A1E88A1C07779700B33C13 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		59E5626618EC0FAD00CEDC86 /* APRoundedMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APRoundedMenuTests.m; sourceTree = "<group>"; };
 		59E5627018EC0FBB00CEDC86 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
 		59E5627118EC0FBB00CEDC86 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
+		C3A1E88A1C07779700B33C13 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		59E5624218EC0FAD00CEDC86 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C3A1E88A1C07779700B33C13 /* README.md */,
 				59E5624318EC0FAD00CEDC86 /* APRoundedMenu-Info.plist */,
 				59E5624418EC0FAD00CEDC86 /* InfoPlist.strings */,
 				59E5624718EC0FAD00CEDC86 /* main.m */,
@@ -257,6 +260,7 @@
 			files = (
 				59E5624818EC0FAD00CEDC86 /* main.m in Sources */,
 				59E5627218EC0FBB00CEDC86 /* APRoundedButton.m in Sources */,
+				C3A1E88B1C07779700B33C13 /* README.md in Sources */,
 				59E5625218EC0FAD00CEDC86 /* APViewController.m in Sources */,
 				59E5624C18EC0FAD00CEDC86 /* APAppDelegate.m in Sources */,
 			);
@@ -463,6 +467,7 @@
 				59E5626C18EC0FAD00CEDC86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59E5626D18EC0FAD00CEDC86 /* Build configuration list for PBXNativeTarget "APRoundedMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +476,7 @@
 				59E5626F18EC0FAD00CEDC86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
